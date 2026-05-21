@@ -1,11 +1,11 @@
 # base image
-FROM baseImage
+FROM node:20-alpine
 
 # working directory
-WORKDIR 
+WORKDIR /app
 
 # copy the source code
-COPY source dest
+COPY . .
 
 # run the app
-CMD [ "executable" ]
+CMD [ "node" ] [ "index.js" ]
